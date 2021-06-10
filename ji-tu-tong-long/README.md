@@ -58,20 +58,24 @@
 
 > 人类在外星球发现了一种生物：
 > 
-> - 每个个体都有 `头` 和 `脚` 的结构，用 `头` 进食用 `脚` 走路。
-> - 每个 `头` 都有着完全一样的外观，每只 `脚` 也是。
-> - 每个个体拥有 `头` 的个数和 `脚` 的个数具有一定的随机性，目前暂时还没总结出可靠的规律。
+> - 每个个体都有 `头` 和 `足` 的结构，用 `头` 进食用 `足` 走路。
+> - 每个 `头` 都有着完全一样的外观，每只 `足` 也是。
+> - 每个个体拥有 `头` 的个数和 `足` 的个数具有一定的随机性，目前暂时还没总结出可靠的规律。
 > 
 > 它们会进行*有性繁殖*，有**两种不同性别**参与**即可完成**。
-> 但在这里，似乎只要 `头` 的个数或 `脚` 的个数存在**不一致**，就会在*繁殖活动*中表现为**两种不同的*性别***。
+> 但在这里，似乎只要 `头` 的个数或 `足` 的个数存在**不一致**，就会在*繁殖活动*中表现为***两种不同性别***。
 > 
-> *繁殖*的具体表现有：
+> **繁殖**的具体表现有：
 > 
-> - *性别*不同的个体会把身体贴合并形成一个公用的 `壳` ，只有 `头` 和 `脚` 会暴露在外；
-> - 头和脚可按需要收进 `壳` 内，但**每个 `头` 和 `脚` 一定都会有可见的对应 `孔洞` 、且一个 `头` 或 `脚` 总会只用自己的那个**；
-> - 在 `壳` 上，可以法轻松分辨一个 `孔洞` 是 `头` 的还是 `脚` 的；
-> - *繁殖*是有周期的，繁殖的结果就是壳内个体增加并随之发生孔洞增加，并且，被繁殖出的个体在*破壳*之前**头脚数目必然与形成 `壳` 的两个个体的其中一个相同**；
-> - 这个 `壳` 会在一段时间后破掉，之后其中的每个个体的 `头` 和 `脚` 的数目都会**程序性地**发生**随机的**变化，并就地再次两两结合或者钻地洞躲藏起来；
+> - **性别**不同的个体会把身体贴合，并分泌形成一个**公用**的 `壳` ，只有 `头` 和 `足` 会暴露在外；
+> - 个体的 `头` 和 `足` 可按需要收进 `壳` 内，但**每个 `头` 和 `足` 一定都会有可见的对应 `孔洞` 、且一个 `头` 或 `足` 总会只用自己的那个**；
+> - 在 `壳` 上，可以法轻松分辨一个 `孔洞` 是 `头` 的还是 `足` 的；
+> - *繁殖*是有周期的，繁殖的结果就是壳内个体增加并随之发生孔洞增加；
+> - 被繁殖出的*子代个体*，在*破壳*之前，其 `头` 和 `足` 数目必然与其*父母代*中的其中一个相同，**不会有例外**。
+> 
+> 另外：
+> 
+> - 这个 `壳` 会在一段时间后破掉，之后其中的每个个体的 `头` 和 `足` 的数目都会**程序性地**发生**随机的**变化，并就地再次两两结合或者钻地洞躲藏起来；
 > - 由于这样的活动习性，在得到足够的认识前，这种生物群曾被人类误认为是一个带 `壳` 的独立个体，并把这种生物命名为 `外型乌龟` ；直到观察到它们繁衍过程中的*破壳*阶段，但这个命名已经沿用至今。
 > 
 
@@ -83,8 +87,10 @@
 > 
 > 可以知道的参数有：
 > 
-> - 一个 `壳` 在形成的时候，参与形成的俩个体**分别**的 `头` 和 `脚` 的数目；
-> - 这个 `壳` 在当前，总共的 `头` 和 `脚` 的数目；
+> - 一个 `壳` 在形成的时候，参与形成的俩个体**分别**的 `头` 和 `足` 的数目；
+> - 这个 `壳` 在当前，总共的 `头` 和 `足` 的数目；
+> 
+> **而且一个壳内只会有两种 `头` 和 `足` 数目的组合**。
 > 
 > 想要求得的是：
 > 
@@ -93,7 +99,7 @@
 > (已经确定在当前的一定时间内壳内个体数不会有变化)
 > 
 
-另外：
+另有：
 
 > > **不能手动破坏壳，否则你只会得到孩子们的尸体。这将会使你受到一定的惩罚。**
 > > 
@@ -114,13 +120,13 @@
 这里的命名是我乱来的，**仅供参考**：
 
 - 当前 `壳` 的 `头` 总数目: `all_a`
-- 当前 `壳` 的 `脚` 总数目: `all_z`
+- 当前 `壳` 的 `足` 总数目: `all_z`
 
 - 当初参与形成 `壳` 的第一种个体的 `头` 数目: `webi_a`
-- 当初参与形成 `壳` 的第一种个体的 `脚` 数目: `webi_z`
+- 当初参与形成 `壳` 的第一种个体的 `足` 数目: `webi_z`
 
 - 当初参与形成 `壳` 的第二种个体的 `头` 数目: `babo_a`
-- 当初参与形成 `壳` 的第二种个体的 `脚` 数目: `babo_z`
+- 当初参与形成 `壳` 的第二种个体的 `足` 数目: `babo_z`
 
 代词是*描述事物*的开端。所以*要输出的值的命名*也最好做一下。
 
@@ -159,7 +165,7 @@ webi_z * webi_hoo + babo_z * babo_hoo = all_z
 
 ```elixir
 webi_a * webi_hoo + babo_a * babo_hoo = all_a # 头的关系
-webi_z * webi_hoo + babo_z * babo_hoo = all_z # 脚的关系
+webi_z * webi_hoo + babo_z * babo_hoo = all_z # 足的关系
 ```
 
 这需要先转一个式子为 `babo_hoo = xxxx webi_hoo xxxx` 的形式
@@ -215,7 +221,7 @@ babo_hoo_dn_then = all_z / babo_z - webi_hoo * webi_z / babo_z
 
 ```elixir
 webi_a * webi_hoo + babo_a * babo_hoo = all_a # 头的关系
-webi_z * webi_hoo + babo_z * babo_hoo = all_z # 脚的关系
+webi_z * webi_hoo + babo_z * babo_hoo = all_z # 足的关系
 ```
 
 这需要先转一个式子为 `webi_hoo = xxxx babo_hoo xxxx` 的形式
@@ -262,19 +268,19 @@ babo_hoo = (all_a - webi_a * all_z / webi_z) / (babo_a - webi_a * babo_z / webi_
 上面得到了这么四套解法：
 
 ```elixir
-## 先求 webi 再求 babo , 用头的式子代入脚的式子
+## 先求 webi 再求 babo , 用头的式子代入足的式子
 webi_hoo_az = (all_z - babo_z * all_a / babo_a) / (webi_z - babo_z * webi_a / babo_a)
 then_babo_hoo_az = all_a / babo_a - webi_hoo_az * webi_a / babo_a
 
-## 先求 webi 再求 babo , 用脚的式子代入头的式子
+## 先求 webi 再求 babo , 用足的式子代入头的式子
 webi_hoo_za = (all_a - babo_a * all_z / babo_z) / (webi_a - babo_a * webi_z / babo_z)
 then_babo_hoo_za = all_z / babo_z - webi_hoo_za * webi_z / babo_z
 
-## 先求 babo 再求 webi , 用头的式子代入脚的式子
+## 先求 babo 再求 webi , 用头的式子代入足的式子
 babo_hoo_az = (all_z - webi_z * all_a / webi_a) / (babo_z - webi_z * babo_a / webi_a)
 then_webi_hoo_az = all_a / webi_a - babo_hoo_az * babo_a / webi_a
 
-## 先求 babo 再求 webi , 用脚的式子代入头的式子
+## 先求 babo 再求 webi , 用足的式子代入头的式子
 babo_hoo_za = (all_a - webi_a * all_z / webi_z) / (babo_a - webi_a * babo_z / webi_z)
 then_webi_hoo_za = all_z / webi_z - babo_hoo_za * babo_z / webi_z
 
@@ -348,13 +354,118 @@ wbbazza
 
 #### python
 
-
+这可能不是最优雅的写法。。。
 
 ```python
-...
+def wbbb (allaz, webiaz, baboaz):
+    
+    all_a, all_z = allaz
+    webi_a, webi_z = webiaz
+    babo_a, babo_z = baboaz
+    
+    ## 先求 webi 再求 babo , 用头的式子代入足的式子
+    webi_hoo_az = (all_z - babo_z * all_a / babo_a) / (webi_z - babo_z * webi_a / babo_a)
+    then_babo_hoo_az = all_a / babo_a - webi_hoo_az * webi_a / babo_a
+
+    ## 先求 webi 再求 babo , 用足的式子代入头的式子
+    webi_hoo_za = (all_a - babo_a * all_z / babo_z) / (webi_a - babo_a * webi_z / babo_z)
+    then_babo_hoo_za = all_z / babo_z - webi_hoo_za * webi_z / babo_z
+
+    ## 先求 babo 再求 webi , 用头的式子代入足的式子
+    babo_hoo_az = (all_z - webi_z * all_a / webi_a) / (babo_z - webi_z * babo_a / webi_a)
+    then_webi_hoo_az = all_a / webi_a - babo_hoo_az * babo_a / webi_a
+
+    ## 先求 babo 再求 webi , 用足的式子代入头的式子
+    babo_hoo_za = (all_a - webi_a * all_z / webi_z) / (babo_a - webi_a * babo_z / webi_z)
+    then_webi_hoo_za = all_z / webi_z - babo_hoo_za * babo_z / webi_z
+    
+    return [ ("webi_then_babo_az", (webi_hoo_az, then_babo_hoo_az) ) ,
+             ("webi_then_babo_za", (webi_hoo_za, then_babo_hoo_za) ) ,
+             ("babo_then_webi_az", (then_webi_hoo_az, babo_hoo_az) ) ,
+             ("babo_then_webi_za", (then_webi_hoo_za, babo_hoo_za) ) ]
+
+### >>> wbbb((609,204), (3,6), (7,1))
+### [('webi_then_babo_az', (21.0, 78.0)), ('webi_then_babo_za', (21.0, 78.0)), ('babo_then_webi_az', (21.0, 78.0)), ('babo_then_webi_za', (21.0, 78.0))]
 ```
 
+#### bash
 
+Bash 是比较挫的。
+
+```bash
+# wbbb ()
+# {
+#     # eg: wbbb 609,204 3,6 7,1
+#     all_a="$(echo "$1"|cut -d, -f1)"    all_z="$(echo "$1"|cut -d, -f2)" &&
+#     webi_a="$(echo "$1"|cut -d, -f1)"   webi_z="$(echo "$1"|cut -d, -f2)" &&
+#     babo_a="$(echo "$1"|cut -d, -f1)"   babo_z="$(echo "$1"|cut -d, -f2)" &&
+#     
+#     
+#     (( webi_hoo_az = (all_z - babo_z * all_a / babo_a) / (webi_z - babo_z * webi_a / babo_a) )) &&
+#     (( then_babo_hoo_az = all_a / babo_a - webi_hoo_az * webi_a / babo_a )) &&
+# 
+#     (( webi_hoo_za = (all_a - babo_a * all_z / babo_z) / (webi_a - babo_a * webi_z / babo_z) )) &&
+#     (( then_babo_hoo_za = all_z / babo_z - webi_hoo_za * webi_z / babo_z )) &&
+# 
+#     (( babo_hoo_az = (all_z - webi_z * all_a / webi_a) / (babo_z - webi_z * babo_a / webi_a) )) &&
+#     (( then_webi_hoo_az = all_a / webi_a - babo_hoo_az * babo_a / webi_a )) &&
+# 
+#     (( babo_hoo_za = (all_a - webi_a * all_z / webi_z) / (babo_a - webi_a * babo_z / webi_z) )) &&
+#     (( then_webi_hoo_za = all_z / webi_z - babo_hoo_za * babo_z / webi_z )) &&
+#     
+#     
+#     echo "webi_then_babo_az:" $webi_hoo_az,$then_babo_hoo_az &&
+#     echo "webi_then_babo_za:" $webi_hoo_za,$then_babo_hoo_za &&
+#     echo "babo_then_webi_az:" $then_webi_hoo_az,$babo_hoo_az &&
+#     echo "babo_then_webi_za:" $then_webi_hoo_za,$babo_hoo_za &&
+#     
+#     echo ;
+# } ;
+```
+
+上面是失败例子，仅作参考。
+
+这里开始是想用双括号计算的。  
+但那玩意儿只支持整数，不支持精细的运算。  
+Bc 不便于格式化输出。用 AWK 吧。
+
+```bash
+wbbb ()
+{
+    # eg: echo 609,204 3,6 7,1 | wbbb
+    awk '
+    {
+        splitd = "," ;
+        split ($1, allaz, splitd) ;
+        split ($2, webiaz, splitd) ;
+        split ($3, baboaz, splitd) ;
+        
+        all_a = allaz[1] ; all_z = allaz[2] ;
+        webi_a = webiaz[1] ; webi_z = webiaz[2] ;
+        babo_a = baboaz[1] ; babo_z = baboaz[2] ;
+        
+        
+        webi_hoo_az = (all_z - babo_z * all_a / babo_a) / (webi_z - babo_z * webi_a / babo_a) ;
+        then_babo_hoo_az = all_a / babo_a - webi_hoo_az * webi_a / babo_a ;
+
+        webi_hoo_za = (all_a - babo_a * all_z / babo_z) / (webi_a - babo_a * webi_z / babo_z) ;
+        then_babo_hoo_za = all_z / babo_z - webi_hoo_za * webi_z / babo_z ;
+
+        babo_hoo_az = (all_z - webi_z * all_a / webi_a) / (babo_z - webi_z * babo_a / webi_a) ;
+        then_webi_hoo_az = all_a / webi_a - babo_hoo_az * babo_a / webi_a ;
+
+        babo_hoo_za = (all_a - webi_a * all_z / webi_z) / (babo_a - webi_a * babo_z / webi_z) ;
+        then_webi_hoo_za = all_z / webi_z - babo_hoo_za * babo_z / webi_z ;
+        
+        
+        print "webi_then_babo_az:", webi_hoo_az, then_babo_hoo_az ;
+        print "webi_then_babo_za:", webi_hoo_za, then_babo_hoo_za ;
+        print "babo_then_webi_az:", then_webi_hoo_az, babo_hoo_az ;
+        print "babo_then_webi_za:", then_webi_hoo_za, babo_hoo_za ;
+        
+    } ' ;
+} ;
+```
 
 
 
